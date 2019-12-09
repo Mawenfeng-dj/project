@@ -1,0 +1,84 @@
+/* 通用样式 */
+*{margin:0;padding:0;}
+li{list-style:none;}
+a{text-decoration:none;}
+
+/* 固定定位样式 */
+.fixed{width:50px;height:230px;position:fixed;z-index:2;right:0px;bottom:0px;}
+.fixed>ul>li{width:50px;height:50px;border:1px solid #E2E2E2;margin-bottom:10px;box-sizing:border-box;background:#fff;text-align:center;line-height:50px;border:0;opacity:0.8;}
+.fixed>ul>li>a{display:block;width:50px;height:50px;color:#7E7470;font-size:36px;}
+.fixed>ul>li>a:hover{color:#fff;}
+.fixed>ul>li:hover{background:orange;}
+/* .fixed>ul>li img{width:80%;height:80%;margin:5px;} */
+
+/* 头部样式 */
+/* .header{background:url(../imgs/藤蔓.jpg) no-repeat center;} */
+.header>.img{width:220px;margin:0 auto;}
+.header>.img>img{width:100%;height:100%;}
+
+/* 导航栏样式 */
+.header>.nav{width:100%;height:60px;background:url(../imgs/05.jpg) center center/100% 100%;opacity:0.9;overflow:hidden;border-top:1px solid #E2E2E2;}
+.header>.nav>ul{width:1200px;height:50px;margin:5px auto;}
+.header>.nav>ul>li{float:left;}
+.header>.nav>ul>li>a{display:block;margin:0 72px;font:14px/50px 微软雅黑;color:#000;}
+.header>.nav>ul>li>a:hover{color:#6cbb24;}
+
+/* 主体样式 */
+/* 轮播图样式 */
+.main{width:100%;overflow:hidden;}
+.main>.banner{height:480px;margin:0px auto;position:relative;overflow:hidden;magin-top:10px;}
+.main>.banner>ul.imgs{position:absolute;top:0px;left:0px;}
+.main>.banner>ul.imgs>li{float:left;}
+.main>.banner>ul.imgs>li>img{height:480px;}
+
+/* 小圆点样式 */
+.main>.banner>ul.num{position:absolute;top:450px;}
+.main>.banner>ul.num>li{width:10px;height:10px;background:#f3f3f3;border-radius:5px;float:left;margin:0px 8px;}
+.main>.banner>ul.num>li.active{background:#aaa;}
+
+.main>.about{width:1200px;height:520px;margin:0 auto;}
+.main>.about>.img{float:left;width:350px;height:100%;overflow:hidden;}
+.main>.about>.img>img{margin-top:20px;}
+.main>.about>.img>img:hover{transform:rotateY(360deg);transition: 1s;}
+.main>.about>.text{float:right;width:830px;height:100%}
+.main>.about>.text>h2{color:#555;margin-top:72px;}
+.main>.about>.text>h2:hover{transform:rotateX(360deg);transition:1s;}
+.main>.about>.text>h2>span{color:#6CBB24;}
+.main>.about>.text>span{color:#666;font:12px Verdana, Arial;margin:10px 0;}
+.main>.about>.text>a{display:block;width:120px;height:40px;font:12px/40px Verdana, Arial;border:1px solid #6CBB24;border-radius:20px;color:#6CBB24;text-align:center;margin-top:50px;}
+.main>.about>.text>a:hover{background:#6CBB24;color:#fff;}
+.main>.video{width:100%;height:650px;margin:0 auto;background:lightblue;overflow:hidden;position:relative;}
+.main>.video>h2{color:#fff;text-align:center;margin:40px 0 15px 0;}
+.main>.video>h2:hover{transform:rotateY(360deg);transition:1s;}
+.main>.video>p{font:12px Verdana, Arial;color:#fff;width:880px;text-align:center;margin:0 auto;}
+.main>.video>video{margin-left:270px;margin-top:30px;}
+.main>.recommended{width:100%;height:540px;overflow:hidden;}
+.main>.recommended>h2{color:#555;margin-top:32px;text-align:center;}
+.main>.recommended>h2:hover{transform:rotateY(360deg);transition:1s;}
+.main>.recommended>h2>span{color:#6CBB24;}
+.main>.recommended>p{text-align:center;font:12px/36px Verdana, Arial;color:#000;}
+.main>.recommended>.product{width:1200px;height:410px;margin:30px auto;}
+.main>.recommended>.product>ul>li{float:left;margin-left:100px;width:280px;height:410px;}
+.main>.recommended>.product>ul>li>img{width:280px;height:270px;}
+.main>.recommended>.product>ul>li>img:hover{transform:rotateY(360deg);transition:1s;}
+.main>.recommended>.product>ul>li>h3{text-align:center;margin:20px 0;color:#555;}
+.main>.recommended>.product>ul>li>p{font:12px Verdana, Arial;text-align:center;color:#505050;}
+.main>.choose{width:100%;height:120px;background:#6CBB24;position:relative;}
+.main>.choose>.left{float:left;margin:15px 0px 0px 60px;}
+.main>.choose>.left>p{font:12px/40px Verdana, Arial;color:#fff;}
+.main>.choose>.right{float:right;}
+.main>.choose>.right>a{display:block;width:120px;height:36px;font:12px/36px Verdana, Arial;border-radius:20px;color:#fff;text-align:center;border:1px solid #fff;position:absolute;right:200px;top:39px;}
+.main>.choose>.right>a:hover{background:#fff;color:#6CBB24;}
+.main>.news{width:1200px;height:460px;margin:0 auto;overflow:hidden;}
+.main>.news>h2{color:#555;margin:32px 0px;text-align:center;}
+.main>.news>h2:hover{transform:rotateX(360deg);transition:1s;}
+.main>.news>h2>span{color:#6CBB24;}
+.main>.news>ul>li{float:left;width:250px;height:460px;margin-left:115px;}
+.main>.news>ul>li>img{width:250px;height:250px;margin-bottom:16px;}
+.main>.news>ul>li>img:hover{transform:rotateY(360deg);transition:1s;}
+.main>.news>ul>li>a{color:#555;font:bold 14px/30px Verdana, Arial;}
+.main>.news>ul>li>a:hover{color:orange;text-decoration:underline;}
+.main>.news>ul>li>p{font:10px Verdana, Arial;color:#505050;}
+
+/* 尾部样式 */
+.footer{width:100%;height:60px;border-top:1px solid #E2E2E2;font:12px/60px Verdana, Arial;text-align:center;color:#505050;box-sizing:border-box;}

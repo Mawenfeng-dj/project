@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>联系我们</title>
+		
+		<!-- 引入jQuery -->
+		<script src="../js/jquery-1.11.1.min.js"></script>
+
+		
+		<!-- 引入图标 -->
+		<link rel="icon" href="../imgs/login2.jpg">
+		<link rel="shortcut icon" href="../imgs/login2.jpg">
+		
+		<!-- 引入css文件 -->
+		<link rel="stylesheet" href="../css/ContactUs.css">
+	</head>
+	<body>
+		<div class="warp">
+			
+			<!-- 固定定位 -->
+			<div class="fixed">
+				<ul>
+					<li class="home"><a href="../index.html">H</a></li>
+					<li class="top"><a href="">&Lambda;</a></li>
+				</ul>
+			</div>
+			
+			<!-- 网页头部内容 -->
+			<div class="header">
+				<div class="img">
+					<img src="../imgs/02.jpg" alt="" id="top" name="top">
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="../index.html">网站首页</a></li>
+						<li><a href="synopsis.html">公司简介</a></li>
+						<li><a href="news.html">新闻资讯</a></li>
+						<li><a href="ProductCenter.html" target="_blank">产品中心</a></li>
+						<li><a href="choiceness.html" target="_blank">臻选花束</a></li>
+						<li><a href="ContactUs.html">联系我们</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<!-- 网页主体内容 -->
+			<div class="main">
+				
+				<!-- 轮播图 -->
+				<div class="banner">
+					<ul class="imgs">
+						<li><img src="../imgs/鲜花1.jpg" alt=""></li>
+						<li><img src="../imgs/鲜花2.jpg" alt=""></li>
+						<li><img src="../imgs/鲜花3.jpg" alt=""></li>
+						<li><img src="../imgs/鲜花4.jpg" alt=""></li>
+						<li><img src="../imgs/鲜花1.jpg" alt=""></li>
+					</ul>
+					<ul class="num">
+						<li value="0" class="active"></li>
+						<li value="1"></li>
+						<li value="2"></li>
+						<li value="3"></li>
+					</ul>
+				</div>
+				
+				<div class="contact">
+					<div class="top">
+						<h2><span>联系</span>我们</h2>
+						<p>CONTACT US</p>
+					</div>
+					<div class="bottom">
+						<div class="left">
+							<iframe src="https://www.amap.com/" frameborder="0" width="600px" height="400px"></iframe>
+							<div class="text">
+								<p>店铺地址：重庆市南岸区弹子石</p>
+								<p>联&nbsp;系&nbsp;人：马女士</p>
+								<p>店铺电话：17725093178</p>
+								<p>店铺QQ：2993990636</p>
+							</div>
+						</div>
+						<div class="right">
+							<p>反馈主题：</p>
+							<input type="text"><br>
+							<p>联&nbsp;系&nbsp;人：</p>
+							<input type="text"><br>
+							<p>联系电话：</p>
+							<input type="text"><br>
+							<p>电子邮箱：</p>
+							<input type="text"><br>
+							<input type="submit" class="submit" value="提交">
+						</div>
+					</div>
+				</div>
+				
+				<div class="thanks">
+					<h2>THANKS</h2>
+					<p>如果您对我们有什么建议、投诉、需求，可以通过留言告诉我们
+				</p>
+					<span>我们会在第一时间了解并及时与您联系</span>
+				</div>
+			</div>
+			
+			<!-- 网页尾部内容 -->
+			<div class="footer">
+				<p>Copyright © 2016-2019,www.17725093178.com,All rights reserved  版权所有 © 南棠盆栽花店 未经许可 严禁复制渝ICP备17725093178号</p>
+			</div>
+		</div>
+		
+		<!-- js样式 -->
+		<script>
+			$(function(){
+				// 吸顶导航
+				$(window).scroll(function(){
+					var scrollTop=$(window).scrollTop();
+					var Height=$('.header').height();	
+					if(scrollTop>Height){
+						$('.nav').css({position:'fixed',top:'0px',zIndex:99})
+					}else{
+						$('.nav').css({position:'static'})
+					}
+				})
+				
+				// 获取页面宽度
+				var Width=window.screen.availWidth;
+				console.log(Width);
+				$('.banner').css({width:Width+'px'});
+				$('.imgs').css({width:(Width*5)+'px'});
+				$('.imgs li').css({width:Width+'px'});
+				$('.imgs li img').css({width:Width+'px'});
+				$('.num').css({left:(Width/2)+'px'});
+				
+				
+				// 轮播图
+				var index = 0;
+				var num = 0;
+				function run(){
+					index++;//1 2 3 4
+					num++;
+					if(index>4){
+						$('.imgs').css('left','0px')
+						index = 1;
+					}	
+					if(num>3){
+						num = 0;
+					}
+					var obj = {left:(-Width*index) + 'px'}
+					$('.imgs').animate(obj,1000);
+					$('.num li').eq(num).addClass('active').siblings().removeClass('active')
+				}
+				var timer = setInterval(run,2000);
+				
+				// 鼠标移入清除定时器
+				$('.num li').mouseover(function(){
+					index = $(this).index();
+					console.log(index);
+					var obj = {left:(-Width*index) + 'px'}
+					$('.imgs').animate(obj,1000);
+					$('.num li').eq(index).addClass('active').siblings().removeClass('active')
+					clearInterval(timer);
+				})
+				
+				// 鼠标移除
+				$('.num li').mouseout(function(){
+					timer = setInterval(run,2000);
+				})
+			})
+		</script>
+	</body>
+</html>

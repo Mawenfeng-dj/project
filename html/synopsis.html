@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>公司简介</title>
+		
+		<!-- 引入jQuery -->
+		<script src="../js/jquery-1.11.1.min.js"></script>
+		
+		<!-- 引入图标 -->
+		<link rel="icon" href="../imgs/login2.jpg">
+		<link rel="shortcut icon" href="../imgs/login2.jpg">
+		
+		<!-- 引入css文件 -->
+		<link rel="stylesheet" href="../css/synopsis.css">
+	</head>
+	<body>
+		<div class="warp">
+			
+			<!-- 固定定位 -->
+			<div class="fixed">
+				<ul>
+					<li class="home"><a href="../index.html">H</a></li>
+					<li class="top"><a href="">&Lambda;</a></li>
+				</ul>
+			</div>
+			
+			<!-- 网页头部内容 -->
+			<div class="header">
+				<div class="img">
+					<img src="../imgs/02.jpg" alt="" id="top" name="top">
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="../index.html">网站首页</a></li>
+						<li><a href="synopsis.html">公司简介</a></li>
+						<li><a href="news.html">新闻资讯</a></li>
+						<li><a href="ProductCenter.html" target="_blank">产品中心</a></li>
+						<li><a href="choiceness.html" target="_blank">臻选花束</a></li>
+						<li><a href="ContactUs.html">联系我们</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<!-- 网页主体内容 -->
+			<div class="main">
+				
+				<!-- 轮播图 -->
+				<div class="banner">
+					<ul class="imgs">
+						<li><img src="../imgs/鲜花1.jpg" alt=""></li>
+						<li><img src="../imgs/鲜花2.jpg" alt=""></li>
+						<li><img src="../imgs/鲜花3.jpg" alt=""></li>
+						<li><img src="../imgs/鲜花4.jpg" alt=""></li>
+						<li><img src="../imgs/鲜花1.jpg" alt=""></li>
+					</ul>
+					<ul class="num">
+						<li value="0" class="active"></li>
+						<li value="1"></li>
+						<li value="2"></li>
+						<li value="3"></li>
+					</ul>
+				</div>
+				
+				<div class="about">
+					<div class="top">
+						<h2><span>公司</span>简介</h2>
+						<p class="English">ABOUT US</p>
+					</div>
+					
+					<div class="bottom">
+						<p>南棠盆栽花店，是在《花艺》社的大力支持下，由重庆南棠有限公司投资成立的国内首家花艺。</p>
+						<p>该花艺平台的出现，将弥补国内花店业远程教育的空白，将更好地为中国花店业服务，为促进南棠盆栽花店业的交流，更快更好地与国际接轨打下良好的基础。</p>
+						<p>我们致力于以下几个方面的教育：提升花艺设计及产品创新能力，我们将携手国内、外最优秀的花艺师推出适合本地市场需要的商业花礼设计，并且将该设计的制作过程拍摄成视频，在视频中将揭示设计的理念、制作的过程、知识 点的讲解等，供花店、花艺师及花艺爱好者学习</p>
+					</div>
+				</div>
+			
+				<div class="environment">
+					<div class="top">
+						<h2>店铺环境</h2>
+						<p>STORE ENVIRONMENT</p>
+					</div>
+					<div class="bottom">
+						<ul class="store">
+							<li><img src="../imgs/店铺1.jpg" alt=""></li>
+							<li><img src="../imgs/店铺3.jpg" alt=""></li>
+							<li><img src="../imgs/店铺4.jpg" alt=""></li>
+							<li><img src="../imgs/店铺6.jpg" alt=""></li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="honor">
+					<div class="top">
+						<h2><span>荣誉</span>资质</h2>
+						<p>HONORARY CERTIFICATE</p>
+					</div>
+					<div class="bottom">
+						<div class="left"><img src="../imgs/奖杯.png" alt=""></div>
+						<div class="right">
+							<p>南棠盆栽花店，是在《花艺》社的大力支持下，由重庆南棠有限公司投资成立的国内首家花艺。</p>
+							<p>该平台的出现，将弥补国内花店业远程教育的空白，更好地为中国花店业服务，促进南棠盆栽花店业的交流，更快更好地与国际接轨打下良好的基础。</p>
+							<p>我们致力于以下几个方面的教育：提升花艺设计及产品创新能力，我们将携手国内、外最优秀的花艺师推出适合本地市场需要的商业花礼设计，并且将该设计的制作过程拍摄成视频，在视频中将揭示设计的理念、制作的过程、知识 点的讲解等，供花店、花艺师及花艺爱好者学习，提升花店经营管理及市场营销能力。</p>
+							<p>我们的特色是：无论是花艺设计还是经营管理培训，都将基于中国花店业的现状及最迫切的需求，将培训与花店的日常经营紧密地结合在一起，因为我们认为，只有最快能转换成生产力的培训才是最好的培训内容的高水准。</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 网页尾部内容 -->
+			<div class="footer">
+				<p>Copyright © 2016-2019,www.17725093178.com,All rights reserved  版权所有 © 南棠盆栽花店 未经许可 严禁复制渝ICP备17725093178号</p>
+			</div>
+		</div>
+		
+		<!-- js样式 -->
+		<script>
+			$(function(){
+				// 吸顶导航
+				$(window).scroll(function(){
+					var scrollTop=$(window).scrollTop();
+					var Height=$('.header').height();	
+					if(scrollTop>Height){
+						$('.nav').css({position:'fixed',top:'0px',zIndex:99})
+					}else{
+						$('.nav').css({position:'static'})
+					}
+				})
+				
+				// 获取页面宽度
+				var Width=window.screen.availWidth;
+				console.log(Width);
+				$('.banner').css({width:Width+'px'});
+				$('.imgs').css({width:(Width*5)+'px'});
+				$('.imgs li').css({width:Width+'px'});
+				$('.imgs li img').css({width:Width+'px'});
+				$('.num').css({left:(Width/2)+'px'});
+				
+				
+				// 轮播图
+				var index = 0;
+				var num = 0;
+				function run(){
+					index++;//1 2 3 4
+					num++;
+					if(index>4){
+						$('.imgs').css('left','0px')
+						index = 1;
+					}	
+					if(num>3){
+						num = 0;
+					}
+					var obj = {left:(-Width*index) + 'px'}
+					$('.imgs').animate(obj,1000);
+					$('.num li').eq(num).addClass('active').siblings().removeClass('active')
+				}
+				var timer = setInterval(run,2000);
+				
+				// 鼠标移入清除定时器
+				$('.num li').mouseover(function(){
+					index = $(this).index();
+					console.log(index);
+					var obj = {left:(-Width*index) + 'px'}
+					$('.imgs').animate(obj,1000);
+					$('.num li').eq(index).addClass('active').siblings().removeClass('active')
+					clearInterval(timer);
+				})
+				
+				// 鼠标移除
+				$('.num li').mouseout(function(){
+					timer = setInterval(run,2000);
+				})
+			})
+		</script>
+	</body>
+</html>

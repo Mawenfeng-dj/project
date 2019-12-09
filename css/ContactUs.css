@@ -1,0 +1,59 @@
+/* 通用样式 */
+*{margin:0;padding:0;}
+li{list-style:none;}
+a{text-decoration:none;}
+
+/* 固定定位样式 */
+.fixed{width:50px;height:230px;position:fixed;z-index:2;right:0px;bottom:0px;}
+.fixed>ul>li{width:50px;height:50px;border:1px solid #E2E2E2;margin-bottom:10px;box-sizing:border-box;background:#fff;opacity:0.8;text-align:center;line-height:50px;border:0;}
+.fixed>ul>li>a{display:block;width:50px;height:50px;color:#7E7470;font-size:36px;}
+.fixed>ul>li>a:hover{color:#fff;}
+.fixed>ul>li:hover{background:orange;}
+
+/* 头部样式 */
+/* .header{background:url(../imgs/藤蔓.jpg) no-repeat center;} */
+.header>.img{width:220px;margin:0 auto;}
+.header>.img>img{width:100%;height:100%;}
+
+/* 导航栏样式 */
+.header>.nav{width:100%;height:60px;background:url(../imgs/05.jpg) center center/100% 100%;opacity:0.9;overflow:hidden;border-top:1px solid #E2E2E2;}
+.header>.nav>ul{width:1200px;height:50px;margin:5px auto;}
+.header>.nav>ul>li{float:left;}
+.header>.nav>ul>li>a{display:block;margin:0 72px;font:14px/50px 微软雅黑;color:#000;}
+.header>.nav>ul>li>a:hover{color:#6cbb24;}
+
+/* 主体样式 */
+.main{width:100%;overflow:hidden;}
+
+/* 轮播图样式 */
+.main>.banner{height:480px;margin:0px auto;position:relative;overflow:hidden;magin-top:10px;}
+.main>.banner>ul.imgs{position:absolute;top:0px;left:0px;}
+.main>.banner>ul.imgs>li{float:left;}
+.main>.banner>ul.imgs>li>img{height:480px;}
+
+/* 小圆点样式 */
+.main>.banner>ul.num{position:absolute;top:450px;}
+.main>.banner>ul.num>li{width:10px;height:10px;background:#f3f3f3;border-radius:5px;float:left;margin:0px 8px;}
+.main>.banner>ul.num>li.active{background:#aaa;}
+.main>.contact{width:100%;overflow:hidden;}
+.main>.contact>.top{width:1200px;height:80px;border-bottom:1px solid #E2E2E2;box-sizing:border-box;margin:30px auto;}
+.main>.contact>.top>h2{text-align:center;color:#505050;}
+.main>.contact>.top>h2:hover{transform:rotateX(360deg);transition:1s;}
+.main>.contact>.top>h2>span{color:#6CBB24;}
+.main>.contact>.top>p{text-align:center;color:#949494;font:12px/50px Verdana, Arial;letter-spacing:2px;}
+.main>.contact>.bottom{width:1200px;height:400px;margin:0 auto;}
+.main>.contact>.bottom>.left{float:left;position:relative;width:600px;height:400px;}
+.main>.contact>.bottom>.left>.text{position:absolute;bottom:0px;;right:0;z-index:2;background:#6CBB24;}
+.main>.contact>.bottom>.left>.text>p{font:14px/2 Microsoft YaHei;color:#fff;padding:0 40px 0 20px;}
+.main>.contact>.bottom>.right{width:560px;height:400px;float:right;}
+.main>.contact>.bottom>.right>p{margin-bottom:10px;}
+.main>.contact>.bottom>.right>input{width:500px;height:45px;border:1px dashed #ccc;margin-bottom:10px;}
+.main>.contact>.bottom>.right>.submit{width:160px;height:40px;margin-top:10px;border:0;background:#6CBB24;}
+.main>.contact>.bottom>.right>.submit:hover{background:#ccc;color:#fff;}
+.main>.thanks{width:1200px;height:160px;margin:0 auto;margin-top:40px;}
+.main>.thanks>h2{font:48px/70px Microsoft YaHei;text-align:center;color:#D9D9D9;}
+.main>.thanks>p{text-align:center;font:16px/40px Microsoft YaHei;color:#C2934E;}
+.main>.thanks>span{display:block;text-align:center;}
+
+/* 尾部样式 */
+.footer{width:100%;height:60px;border-top:1px solid #E2E2E2;font:12px/60px Verdana, Arial;text-align:center;color:#505050;box-sizing:border-box;}
